@@ -4,529 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Relações Internacionais - IFSP Guarulhos</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .ri-container {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #1a1a2e;
-    line-height: 1.6;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 16px;
-  }
-
-  .ri-header {
-    background: linear-gradient(135deg, #003366 0%, #0055a5 50%, #0077be 100%);
-    border-radius: 16px;
-    padding: 40px 36px 32px;
-    margin-bottom: 32px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,51,102,0.25);
-  }
-
-  .ri-header::after {
-    content: "";
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-  }
-
-  .ri-header h1 {
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    margin-bottom: 6px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .ri-header .subtitle {
-    color: rgba(255,255,255,0.9);
-    font-size: 1rem;
-    font-weight: 400;
-    position: relative;
-    z-index: 1;
-  }
-
-  .ri-header .badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.18);
-    color: #fff;
-    padding: 4px 14px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 500;
-    margin-top: 12px;
-    backdrop-filter: blur(4px);
-    position: relative;
-    z-index: 1;
-  }
-
-  /* ===== BANNER MISSÃO ===== */
-  .ri-banner-missao {
-    border-radius: 16px;
-    margin-bottom: 28px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  }
-
-  .ri-mosaico-mini {
-    background: linear-gradient(135deg, #0b3d5c 0%, #1a6a8a 100%);
-    padding: 18px 28px;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    flex-wrap: wrap;
-    position: relative;
-    min-height: 100px;
-  }
-
-  .ri-mosaico-mini .fotos-wrapper {
-    position: relative;
-    width: 150px;
-    height: 85px;
-    flex-shrink: 0;
-    margin-right: 10px;
-  }
-
-  .ri-mosaico-mini .minifoto {
-    position: absolute;
-    width: 76px;
-    height: 58px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
-    border: 2px solid rgba(255,255,255,0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .ri-mosaico-mini .minifoto:hover {
-    transform: scale(1.15) !important;
-    z-index: 10 !important;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-    border-color: #fff;
-  }
-
-  /* Foto 1 - bandeira Colombia - na frente centralizada */
-  .ri-mosaico-mini .f1 {
-    top: 10px;
-    left: 44px;
-    z-index: 5;
-    transform: rotate(0deg);
-    width: 84px;
-    height: 64px;
-    border-width: 2.5px;
-  }
-
-  .ri-mosaico-mini .f2 {
-    top: 0;
-    left: 2px;
-    z-index: 3;
-    transform: rotate(-5deg);
-  }
-
-  .ri-mosaico-mini .f3 {
-    top: 30px;
-    left: 4px;
-    z-index: 2;
-    transform: rotate(6deg);
-  }
-
-  .ri-mosaico-mini .f4 {
-    top: 2px;
-    left: 104px;
-    z-index: 1;
-    transform: rotate(-4deg);
-  }
-
-  .ri-mosaico-mini .texto-missao {
-    flex: 1;
-    min-width: 200px;
-    color: #fff;
-    padding-left: 8px;
-  }
-
-  .ri-mosaico-mini .texto-missao h2 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-
-  .ri-mosaico-mini .texto-missao p {
-    color: rgba(255,255,255,0.85);
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
-
-  .ri-mosaico-mini .btn-galeria {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #fff;
-    color: #0b3d5c;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 0.82rem;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    flex-shrink: 0;
-  }
-
-  .ri-mosaico-mini .btn-galeria:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    background: #f0f7ff;
-  }
-
-  .ri-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 28px;
-  }
-
-  .ri-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 24px 24px 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    border: 1px solid #eef2f7;
-    transition: all 0.3s ease;
-  }
-
-  .ri-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.10);
-    border-color: #c0d4e8;
-  }
-
-  .ri-card .icon {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-  }
-
-  .ri-card h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #003366;
-    margin-bottom: 8px;
-  }
-
-  .ri-card p, .ri-card li {
-    font-size: 0.9rem;
-    color: #3d4a5c;
-  }
-
-  .ri-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .ri-card ul li {
-    padding: 4px 0 4px 20px;
-    position: relative;
-  }
-
-  .ri-card ul li::before {
-    content: "\25B8";
-    position: absolute;
-    left: 0;
-    color: #0077be;
-    font-weight: 700;
-  }
-
-  .ri-card.contato {
-    background: #f0f7ff;
-    border-color: #b8d4ec;
-  }
-
-  .ri-card.contato .contato-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    color: #1a3a5c;
-  }
-
-  .ri-card.contato .contato-item strong {
-    min-width: 50px;
-    color: #003366;
-  }
-
-  .ri-card.contato .contato-item a {
-    color: #0055a5;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .ri-card.contato .contato-item a:hover {
-    text-decoration: underline;
-  }
-
-  .ri-card-full {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 28px 32px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    border: 1px solid #eef2f7;
-    margin-bottom: 20px;
-  }
-
-  .ri-card-full h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #003366;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .ri-card-full p {
-    font-size: 0.92rem;
-    color: #3d4a5c;
-    margin-bottom: 6px;
-  }
-
-  .ri-card-full ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 6px 20px;
-  }
-
-  .ri-card-full ul li {
-    padding: 4px 0 4px 20px;
-    position: relative;
-    font-size: 0.9rem;
-    color: #3d4a5c;
-  }
-
-  .ri-card-full ul li::before {
-    content: "\25B8";
-    position: absolute;
-    left: 0;
-    color: #0077be;
-    font-weight: 700;
-  }
-
-  .ri-parcerias {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 8px;
-  }
-
-  .ri-parceria-item {
-    background: #f4f8fc;
-    padding: 10px 18px;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #003366;
-    border: 1px solid #d4e3f0;
-  }
-
-  .ri-depoimento {
-    background: #f9fafb;
-    border-left: 4px solid #0077be;
-    padding: 16px 20px;
-    border-radius: 0 10px 10px 0;
-    margin-top: 10px;
-    font-style: italic;
-    color: #2c3e50;
-    font-size: 0.92rem;
-  }
-
-  .ri-depoimento .autor {
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 6px;
-    color: #003366;
-    font-size: 0.85rem;
-  }
-
-  .ri-timeline {
-    position: relative;
-    padding-left: 28px;
-    margin-top: 8px;
-  }
-
-  .ri-timeline::before {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 4px;
-    bottom: 4px;
-    width: 2px;
-    background: #c0d4e8;
-  }
-
-  .ri-timeline-item {
-    position: relative;
-    margin-bottom: 14px;
-    padding-left: 8px;
-  }
-
-  .ri-timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -24px;
-    top: 6px;
-    width: 12px;
-    height: 12px;
-    background: #0077be;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 0 2px #0077be;
-  }
-
-  .ri-timeline-item .data {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #0077be;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .ri-timeline-item p {
-    font-size: 0.88rem;
-    color: #3d4a5c;
-    margin-top: 2px;
-  }
-
-  .ri-docs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    margin-top: 4px;
-  }
-
-  .ri-doc-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #f4f8fc;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #003366;
-    text-decoration: none;
-    transition: background 0.2s;
-    cursor: pointer;
-  }
-
-  .ri-doc-item:hover {
-    background: #e4eef8;
-  }
-
-  .ri-doc-item .doc-icon {
-    font-size: 1.2rem;
-  }
-
-  .ri-footer {
-    text-align: center;
-    padding: 24px 0 8px;
-    font-size: 0.8rem;
-    color: #6b7a8a;
-    border-top: 1px solid #eef2f7;
-    margin-top: 12px;
-  }
-
-  @media (max-width: 700px) {
-    .ri-mosaico-mini {
-      flex-direction: column;
-      align-items: center;
-      padding: 18px 20px;
-      gap: 16px;
-    }
-    .ri-mosaico-mini .fotos-wrapper {
-      align-self: center;
-      margin-bottom: 0;
-      margin-right: 0;
-    }
-    .ri-mosaico-mini .texto-missao {
-      padding-left: 0;
-      text-align: center;
-    }
-    .ri-mosaico-mini .btn-galeria {
-      width: 100%;
-      justify-content: center;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .ri-header { padding: 28px 20px; }
-    .ri-header h1 { font-size: 1.5rem; }
-    .ri-card-full { padding: 20px; }
-    .ri-card-full ul { grid-template-columns: 1fr; }
-    .ri-grid { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="campi e caras.css">
 </head>
+
 <body>
 
-<div class="ri-container">
+<!-- =========================================================
+     CONTAINER VISUAL DOS CAMPI
+========================================================= -->
 
+<div class="ifsp-campi-banner">
+  <!-- =============================================
+       CAMPUS GUARULHOS - ESQUERDA
+  ============================================== -->
+  <div class="ifsp-campi-esquerda">
+    <div class="ifsp-campus-foto ifsp-campus-guarulhos">
+      <img
+        src="https://www.guarulhosonline.com.br/wp-content/uploads/2023/08/Instituto-Federal-de-Sao-Paulo-campus-Guarulhos-1024x682.jpg"
+        alt="IFSP Campus Guarulhos"
+        loading="lazy"
+      >
+      <span class="campus-nome">
+        Campus Guarulhos
+      </span>
+    </div>
+  </div>
+  <!-- =============================================
+       LOGO CENTRAL
+  ============================================== -->
+  <a
+    class="ifsp-logo-central"
+    href="https://www.ifsp.edu.br/index.php/component/content/article/167-arinter/arinter-destaques/3294-english-version-version-en-espanhol"
+    target="_blank"
+    rel="noopener"
+    alt="Instituto Federal de São Paulo"
+  >
+    <img
+      src="https://i.postimg.cc/GpyyTWFf/Logo-IF.png"
+      alt="Instituto Federal de São Paulo"
+    >
+  </a>
+  <!-- =============================================
+       OUTROS CAMPI - DIREITA 
+=============================================-->
+  <div class="ifsp-campi-direita">
+    <!-- Campus São Paulo -->
+    <div class="ifsp-campus-foto ifsp-campus-direito">
+      <img
+        src="https://set.org.br/wp-content/uploads/2020/02/ifsp.jpg"
+        alt="IFSP Campus São Paulo"
+        loading="lazy"
+      >
+    </div>
+    <!-- Vista geral de outro campus -->
+    <div class="ifsp-campus-foto ifsp-campus-direito">
+      <img
+        src="https://imagesapt.apontador-assets.com/fit-in/640x480/8ff7657c2b4e453180d8535cf2d4bf65/ifsp.jpg"
+        alt="Campus do Instituto Federal de São Paulo"
+        loading="lazy"
+      >
+    </div>
+    <!-- Repetição visual complementar -->
+    <div class="ifsp-campus-foto ifsp-campus-direito">
+      <img
+        src="https://www.guarulhosonline.com.br/wp-content/uploads/2023/05/ifsp-campus-guarulhos.jpg"
+        alt="Instituto Federal de São Paulo"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+	Cabeçalho da Comissão
+============================================= -->
+
+<div class="ri-container">
   <div class="ri-header">
     <h1>Relações Internacionais</h1>
     <p class="subtitle">Coordenadoria de Ações Internacionais - IFSP Campus Guarulhos</p>
-    <span class="badge">Atualizado em 2025</span>
+    <span class="badge">Atualizado em 2026</span>
   </div>
 
-  <!-- ===== BANNER MISSÃO COM FOTOS ===== -->
-  <div class="ri-banner-missao">
-    <div class="ri-mosaico-mini">
-      <div class="fotos-wrapper">
-        <img class="minifoto f1"
-          src="https://live.staticflickr.com/65535/55226225388_38b3ce7a93_q.jpg"
-          alt="Grupo com bandeira da Colombia"
-          loading="lazy">
-        <img class="minifoto f2"
-          src="https://live.staticflickr.com/65535/55394217476_86a59ab445_q.jpg"
-          alt="Encerramento relatos de experiencia"
-          loading="lazy">
-        <img class="minifoto f3"
-          src="https://live.staticflickr.com/65535/55394211551_b3b57d015e_q.jpg"
-          alt="Encerramento relatos de experiencia"
-          loading="lazy">
-        <img class="minifoto f4"
-          src="https://live.staticflickr.com/65535/55257126040_b8beb119d6_q.jpg"
-          alt="Visita tecnica metro"
-          loading="lazy">
-      </div>
 
-      <div class="texto-missao">
-        <h2>Missão Internacional Brasil-Colômbia 2025</h2>
-        <p>IFSP Guarulhos e Instituición Universitaria Pascual Bravo, Medellín. Novembro de 2025 — cooperação acadêmica e cultural que transcende fronteiras.</p>
-      </div>
+<!-- =============================================
+	GRID DE CARDS
+============================================= -->
 
-      <a class="btn-galeria" href="https://www.flickr.com/photos/204466937@N07/albums/" target="_blank" rel="noopener">
-        Álbum completo de fotos e vídeos
-      </a>
-    </div>
-  </div>
-
-  <!-- ===== GRID DE CARDS ===== -->
   <div class="ri-grid">
     <div class="ri-card">
       <div class="icon">🎯</div>
@@ -559,7 +124,49 @@
     </div>
   </div>
 
-  <!-- ===== ATIVIDADES ===== -->
+
+<!-- =============================================
+	BANNER MISSÃO COM FOTOS
+============================================= -->
+
+  <div class="ri-banner-missao">
+    <div class="ri-mosaico-mini">
+      <div class="fotos-wrapper">
+        <img class="minifoto f1"
+          src="https://live.staticflickr.com/65535/55226225388_38b3ce7a93_q.jpg"
+          alt="Grupo com bandeira da Colombia"
+          loading="lazy">
+        <img class="minifoto f2"
+          src="https://live.staticflickr.com/65535/55394217476_86a59ab445_q.jpg"
+          alt="Encerramento relatos de experiencia"
+          loading="lazy">
+        <img class="minifoto f3"
+          src="https://live.staticflickr.com/65535/55394211551_b3b57d015e_q.jpg"
+          alt="Encerramento relatos de experiencia"
+          loading="lazy">
+        <img class="minifoto f4"
+          src="https://live.staticflickr.com/65535/55257126040_b8beb119d6_q.jpg"
+          alt="Visita tecnica metro"
+          loading="lazy">
+      </div>
+
+      <div class="texto-missao">
+        <h2>Missão Internacional Brasil-Colômbia 2025</h2>
+        <p>IFSP Guarulhos e Instituición Universitaria Pascual Bravo, Medellín. Novembro de 2025 — cooperação acadêmica e cultural que transcende fronteiras.</p>
+      </div>
+
+      <a class="btn-galeria" href="https://www.flickr.com/photos/204466937@N07/albums/" target="_blank" rel="noopener">
+        Álbum completo de fotos e vídeos
+      </a>
+    </div>
+  </div>
+
+
+
+<!-- =============================================
+	ATIVIDADES
+============================================= -->
+
   <div class="ri-card-full">
     <h3>Atividades Realizadas e Em Andamento</h3>
     <div class="ri-timeline">
@@ -591,7 +198,10 @@
     </div>
   </div>
 
-  <!-- ===== PARCERIAS ===== -->
+<!-- =============================================
+	PARCERIAS
+============================================= -->
+
   <div class="ri-card-full">
     <h3>Parcerias Internacionais</h3>
     <p>O Campus Guarulhos mantém acordos e parcerias com instituições de ensino e pesquisa no exterior.</p>
@@ -607,10 +217,51 @@
     </p>
   </div>
 
-  <!-- ===== EDITAIS ===== -->
+
+<!-- =============================================
+	EVENTOS E OPORTUNIDADES
+============================================= -->
+
+      <div class="ri-card-full" style="margin-bottom: 28px;">
+        <h3>Eventos e Oportunidades</h3>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 16px;">
+          <div style="text-align: center; padding: 20px; border: 2px solid #e4eef8; border-radius: 12px; background: #f9fbfe;">
+            <p style="font-size: 0.9rem; font-weight: 600; color: #003366; margin-bottom: 12px;">📢 
+<a href="https://www.ifsp.edu.br/index.php/component/content/article/17-ultimas-noticias/6015-ifsp-lanca-nacionalmente-exame-de-proficiencia-em-lingua-inglesa-voltado-a-rede-federal" target="_blank" style="display: inline-block; margin-bottom: 12px;">Exame EPLI - English Proficiency Level International</a></p>
+            <a href="https://drive.google.com/file/d/1IjScGgo2TP-dS2J7cF5r6kVjSVU460-5/view?usp=sharing" target="_blank" style="display: inline-block; margin-bottom: 12px;">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg==" alt="Cartaz EPLI" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </a>
+            <p style="font-size: 0.85rem; color: #555; line-height: 1.5; margin-bottom: 12px;">Certificação internacional de proficiência em inglês para estudantes e servidores do IFSP.</p>
+            <a href="https://drive.google.com/file/d/1IjScGgo2TP-dS2J7cF5r6kVjSVU460-5/view?usp=sharing" target="_blank" style="display: inline-block; background: #003366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s;">
+              📥 Baixar Cartaz
+            </a>
+          </div>
+
+
+          <div style="text-align: center; padding: 20px; border: 2px solid #e4eef8; border-radius: 12px; background: #f9fbfe;">
+            <p style="font-size: 0.9rem; font-weight: 600; color: #003366; margin-bottom: 12px;">📢 
+<a href="https://www.ifsp.edu.br/index.php/component/content/article/17-ultimas-noticias/6074-ifsp-abre-64-vagas-para-mobilidade-internacional-em-portugal-mexico-espanha-e-chile" target="_blank" style="display: inline-block; margin-bottom: 12px;">Mobilidade Estudantil International 2027-1</a></p>
+            <a href="https://drive.google.com/file/d/1IjScGgo2TP-dS2J7cF5r6kVjSVU460-5/view?usp=sharing" target="_blank" style="display: inline-block; margin-bottom: 12px;">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg==" alt="Mobilidade" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </a>
+            <p style="font-size: 0.85rem; color: #555; line-height: 1.5; margin-bottom: 12px;">IFSP abre 64 vagas para mobilidade internacional em Portugal, México, Espanha e Chile 	   </p>
+            <a href="https://www.ifsp.edu.br/images/2026/08-agosto/Edital_mobilidade_out_superior_-_autocusteio_-_2027-1.pdf" target="_blank" style="display: inline-block; background: #003366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s;">
+              📋 Edital 27/2026
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+<!-- =============================================
+	EDITAIS
+============================================= -->
+
   <div class="ri-card-full">
     <h3>Editais, Documentos e Relatórios</h3>
     <div class="ri-docs">
+<div class="ri-doc-item">📋 <a href="https://www.ifsp.edu.br/images/2026/08-agosto/Edital_mobilidade_out_superior_-_autocusteio_-_2027-1.pdf" target="_blank">Edital 27/2026</a></div>
       <div class="ri-doc-item" onclick="alert('Edital 52/2024 — Mobilidade Portugal');">📋 Edital 52/2024</div>
       <div class="ri-doc-item" onclick="alert('Edital 340/2023 — Altíssia');">📋 Edital 340/2023</div>
       <div class="ri-doc-item" onclick="alert('Edital 339/2023 — Altíssia');">📋 Edital 339/2023</div>
@@ -620,22 +271,69 @@
     </div>
   </div>
 
-  <!-- ===== DEPOIMENTOS ===== -->
+<!-- =============================================
+	DEPOIMENTOS
+============================================= -->
+
   <div class="ri-card-full">
     <h3>Depoimentos</h3>
-    <div class="ri-depoimento">
-      <p>&quot;Participar da mobilidade acadêmica em Portugal foi uma experiência transformadora.&quot;</p>
-      <p class="autor">— Mariana Ferraz Marcelino, Mecatrônica</p>
-    </div>
-    <div class="ri-depoimento" style="margin-top:10px;">
-      <p>&quot;A parceria com a Pascual Bravo simboliza a troca de saberes e construção de pontes entre países.&quot;</p>
-      <p class="autor">— Prof. Dr. Wilson Carlos da Silva Junior</p>
-    </div>
-    <div class="ri-depoimento" style="margin-top:10px;">
-      <p>&quot;A sala de aula se torna um espaço multicultural, desenvolvendo a consciência global de cada um.&quot;</p>
-      <p class="autor">— Profa. Ms. Elizabete Rubliauskas Giachetti</p>
-    </div>
-  </div>
+
+
+<div class="ri-depoimento" style="margin-top:10px;">
+  <p>&quot;A parceria com a Pascual Bravo simboliza a troca de saberes e construção de pontes entre países.&quot;</p>
+  <p class="autor">
+    <img src="img/wilson0.png" 
+         alt="Prof. Dr. Wilson Carlos da Silva Junior"
+         class="foto-autor">
+    — Prof. Dr. Wilson Carlos da Silva Junior
+  </p>
+</div>
+
+<div class="ri-depoimento" style="margin-top:10px;">
+  <p>&quot;A sala de aula se torna um espaço multicultural, desenvolvendo a consciência global de cada um.&quot;</p>
+  <p class="autor">
+    <img src="img/bete0.png" 
+         alt="Profa. Ms. Elizabete Rubliauskas Giachetti"
+         class="foto-autor">
+    — Profa. Ms. Elizabete Rubliauskas Giachetti
+  </p>
+</div>
+
+<div class="ri-depoimento" style="margin-top:10px;">
+  <p>&quot;A troca de experiências e conhecimentos entre instituições de diversos paises sempre foi um pilar para o desenvolvimento da pesquisa.&quot;</p>
+  <p class="autor">
+    <img src="img/denis0.png" 
+         alt="Profa. Dr. Dennis Lozano Toufen"
+         class="foto-autor">
+    — Profa. Dr. Dennis Lozano Toufen
+  </p>
+</div>
+
+<div class="ri-depoimento" style="margin-top:10px;">
+  <p>&quot;Receber os alunos, alunas, professores e professoras da Universidade Pascual Bravo foi uma experiência bastante proveitosa, pois foi possível abrir o horizonte das nossas pesquisas. Os nossos alunos ficaram maravilhados com o intercâmbio de saberes com a visita recebida!&quot;</p>
+  <p class="autor">
+    <img src="img/shibu0.png" 
+         alt="Profa. Dr. Marcelo Kenji Shibuya"
+         class="foto-autor">
+    — Profa. Dr. Marcelo Kenji Shibuya
+  </p>
+</div>
+
+<div class="ri-depoimento" style="margin-top:10px;">
+  <p>&quot;Participar da mobilidade acadêmica em Portugal foi uma experiência transformadora.&quot;</p>
+  <p class="autor">
+    <img src="" 
+         alt=""
+         class="foto-autor">
+    — Mariana Ferraz Marcelino, Mecatrônica
+  </p>
+</div>
+
+</div>
+
+<!-- =============================================
+	RODAPÉ
+============================================= -->
 
   <div class="ri-footer">
     <p>Coordenadoria de Ações Internacionais — IFSP Campus Guarulhos</p>
