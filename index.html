@@ -6,6 +6,7 @@
 <title>Relações Internacionais - IFSP Guarulhos</title>
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="campi e caras.css">
+<link rel="stylesheet" href="integrantes.css">
 </head>
 
 <body>
@@ -117,11 +118,126 @@
       </div>
     </div>
 
+
+<!--
     <div class="ri-card">
       <div class="icon">👥</div>
       <h3>Comissão de Ações Internacionais</h3>
       <p>A Comissão de Relações Internacionais do IFSP Guarulhos coordena e impulsiona as iniciativas de cooperação acadêmica internacional, mobilidade estudantil e docente, parcerias institucionais e projetos de pesquisa conjuntos.</p>
     </div>
+-->
+
+	  <div class="ri-card">
+  <div class="icon">👥</div>
+
+  <h3>Comissão de Ações Internacionais</h3>
+
+  <p>
+    A Comissão de Relações Internacionais do IFSP Guarulhos coordena e
+    impulsiona as iniciativas de cooperação acadêmica internacional,
+    mobilidade estudantil e docente, parcerias institucionais e projetos
+    de pesquisa conjuntos.
+  </p>
+
+  <p class="total-integrantes">
+    Comissão composta por <strong>13 integrantes</strong>.
+  </p>
+
+  <button
+    class="botao-integrantes"
+    type="button"
+    id="abrirComissao"
+    aria-haspopup="dialog"
+    aria-controls="modalComissao"
+  >
+    Ver integrantes
+  </button>
+</div>
+
+<!-- Modal com a lista dos integrantes -->
+<div
+  class="modal-comissao"
+  id="modalComissao"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="tituloModalComissao"
+  hidden
+>
+  <div class="modal-conteudo">
+    <button
+      class="fechar-modal"
+      type="button"
+      id="fecharComissao"
+      aria-label="Fechar lista de integrantes"
+    >
+      &times;
+    </button>
+
+    <h2 id="tituloModalComissao">
+      Comissão de Ações Internacionais
+    </h2>
+
+    <p class="descricao-modal">
+      Integrantes da Comissão de Ações Internacionais do IFSP Campus Guarulhos.
+    </p>
+
+    <div class="lista-integrantes">
+      <div class="integrante">
+        <strong>Nome completo do integrante 1</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 2</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 3</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 4</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 5</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 6</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 7</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 8</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 9</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 10</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 11</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 12</strong>
+      </div>
+
+      <div class="integrante">
+        <strong>Nome completo do integrante 13</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+	  
   </div>
 
 
@@ -414,5 +530,50 @@
 
 </div>
 
+
+<script>
+  const abrirComissao = document.getElementById("abrirComissao");
+  const fecharComissao = document.getElementById("fecharComissao");
+  const modalComissao = document.getElementById("modalComissao");
+
+  let elementoAnterior;
+
+  function abrirModalComissao() {
+    elementoAnterior = document.activeElement;
+
+    modalComissao.hidden = false;
+    document.body.style.overflow = "hidden";
+
+    fecharComissao.focus();
+  }
+
+  function fecharModalComissao() {
+    modalComissao.hidden = true;
+    document.body.style.overflow = "";
+
+    if (elementoAnterior) {
+      elementoAnterior.focus();
+    }
+  }
+
+  abrirComissao.addEventListener("click", abrirModalComissao);
+  fecharComissao.addEventListener("click", fecharModalComissao);
+
+  // Fecha quando o usuário clica fora da caixa branca
+  modalComissao.addEventListener("click", function (evento) {
+    if (evento.target === modalComissao) {
+      fecharModalComissao();
+    }
+  });
+
+  // Fecha com a tecla Esc
+  document.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape" && !modalComissao.hidden) {
+      fecharModalComissao();
+    }
+  });
+</script>
+
+	
 </body>
 </html>
