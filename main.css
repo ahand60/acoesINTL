@@ -500,3 +500,27 @@
   background-color: #005b91;
   text-decoration: underline;
 }
+
+
+.ri-card-full .ri-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ri-card-full .ri-links a.ri-button {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #0077be;
+  color: #fff !important;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+}
+
+.ri-card-full .ri-links a.ri-button:hover,
+.ri-card-full .ri-links a.ri-button:focus {
+  background-color: #005b91;
+  text-decoration: underline !important;
+}
