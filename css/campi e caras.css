@@ -1,0 +1,279 @@
+
+  /* =========================================================
+     CONTAINER PRINCIPAL
+  ========================================================= */
+
+  .ifsp-campi-banner {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    margin: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid #d7e7dd;
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.10),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+  }
+
+
+  /* =========================================================
+     TEXTURA DE FUNDO
+  ========================================================= */
+
+  .ifsp-campi-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        circle at left center,
+        rgba(0, 120, 70, 0.10),
+        transparent 42%
+      ),
+      radial-gradient(
+        circle at right center,
+        rgba(0, 120, 70, 0.08),
+        transparent 42%
+      );
+    pointer-events: none;
+  }
+
+
+  
+  /* =========================================================
+     ÁREAS DAS IMAGENS
+     ========================================================= */
+
+  .ifsp-campi-esquerda,
+  .ifsp-campi-direita {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+
+  /* =========================================================
+     CAMPUS GUARULHOS - ESQUERDA
+  ========================================================= */
+
+  .ifsp-campi-esquerda {
+    left: 0;
+    width: 43%;
+    justify-content: flex-start;
+  }
+
+
+  /* =========================================================
+     OUTROS CAMPI - DIREITA
+  ========================================================= */
+
+  .ifsp-campi-direita {
+    right: 0;
+    width: 47%;
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+
+  /* =========================================================
+     FOTOS
+  ========================================================= */
+
+  .ifsp-campus-foto {
+    position: relative;
+    height: 90%;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition:
+      transform 0.4s ease,
+      filter 0.4s ease;
+
+    /* Transparência mais elegante */
+    opacity: 0.1;
+    filter:
+      saturate(0.80)
+      contrast(0.95);
+  }
+
+
+  /* =========================================================
+     HOVER SUTIL
+  ========================================================= */
+
+  .ifsp-campus-foto:hover {
+    transform: scale(1.03);
+    opacity: 0.1;
+    filter:
+      saturate(1)
+      contrast(1);
+    z-index: 10;
+  }
+
+
+  .ifsp-campus-foto img {
+    width: 98%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+  }
+
+
+  /* =========================================================
+     CAMPUS GUARULHOS
+  ========================================================= */
+
+  .ifsp-campus-guarulhos {
+    width: 100%;
+    height: 100%;
+    border-radius:
+      0 14px 14px 0;
+    box-shadow:
+      8px 4px 22px rgba(0,0,0,0.10);
+  }
+
+
+  /* =========================================================
+     FOTOS DOS OUTROS CAMPI
+  ========================================================= */
+
+  .ifsp-campus-direito {
+    width: 35%;
+    height: 88%;
+    margin-left: 0px;
+    border-radius: 12px;
+    box-shadow:
+      0 4px 18px rgba(0,0,0,0.10);
+  }
+
+
+  /* FOTO CENTRAL DO MOSAICO */
+
+  .ifsp-campus-direito:nth-child(2) {
+    width: 38%;
+    height: 100%;
+    z-index: 3;
+  }
+
+
+
+  /* =========================================================
+     ÁREA CENTRAL DO LOGO
+  ========================================================= */
+
+  .ifsp-logo-central {
+    position: relative;
+    z-index: 6;
+    width: 225px;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    border-radius: 50%;
+    background:
+      radial-gradient(
+        circle,
+        rgba(255,255,255,1) 38%,
+        rgba(255,255,255,0.97) 62%,
+        rgba(255,255,255,0.65) 82%,
+        rgba(255,255,255,0) 100%
+      );
+  }
+
+
+  /* =========================================================
+     LOGO
+  ========================================================= */
+
+  .ifsp-logo-central img {
+    width: 130px;
+    height: auto;
+    display: block;
+    filter:
+      drop-shadow(
+        0 4px 8px rgba(0,0,0,0.10)
+      );
+    transition:
+      transform 0.35s ease;
+  }
+  .ifsp-logo-central:hover img {
+    transform:
+      scale(1.05);
+  }
+
+
+
+  /* =========================================================
+     RESPONSIVIDADE
+  ========================================================= */
+
+  @media (max-width: 750px) {
+    .ifsp-campi-banner {
+      min-height: 280px;
+    }
+    .ifsp-campi-esquerda,
+    .ifsp-campi-direita {
+      top: 25px;
+      height: 150px;
+    }
+    .ifsp-logo-central {
+      width: 150px;
+      height: 150px;
+    }
+    .ifsp-logo-central img {
+      width: 95px;
+    }
+    .ifsp-campus-foto {
+      opacity: 0.1;
+    }
+    .ifsp-identidade {
+      bottom: 20px;
+      font-size: 0.58rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ifsp-campi-banner {
+      min-height: 250px;
+    }
+    .ifsp-campi-esquerda,
+    .ifsp-campi-direita {
+      top: 25px;
+      height: 130px;
+    }
+    .ifsp-logo-central {
+      width: 130px;
+      height: 130px;
+    }
+    .ifsp-logo-central img {
+      width: 82px;
+    }
+    .ifsp-campus-direito:nth-child(3) {
+      display: none;
+    }
+  }
+
+
+
+ /* =========================================================
+     FOTOS
+  ========================================================= */
+
+.foto-autor {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
