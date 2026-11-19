@@ -1,0 +1,29 @@
+<!-- Eventos e Oportunidades (dados em _data/eventos.yml) -->
+<div class="ri-card-full ri-card-full--eventos">
+  <h3>Eventos e Oportunidades</h3>
+
+  {% for e in site.data.eventos %}
+  <div class="ri-evento">
+    <div class="ri-evento-linha">
+      <div class="ri-evento-texto">
+        <p class="ri-evento-titulo">📢
+          <a href="{{ e.link }}" target="_blank" rel="noopener">
+            {{ e.titulo }}
+          </a>
+        </p>
+        <p class="ri-evento-descricao">{{ e.descricao }}</p>
+        <a class="ri-evento-botao" href="{{ e.botao_link }}" target="_blank" rel="noopener">
+          {{ e.botao_texto }}
+        </a>
+      </div>
+      <div class="ri-evento-miniatura">
+        {% if e.imagem %}
+        <a href="{{ e.botao_link }}" target="_blank" rel="noopener">
+          <img src="{{ e.imagem }}" alt="{{ e.imagem_alt }}">
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

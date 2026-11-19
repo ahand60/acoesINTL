@@ -1,0 +1,53 @@
+<!-- Grid de cards: missão, contato e comissão -->
+<div class="ri-grid">
+
+  <div class="ri-card">
+    <div class="icon">🎯</div>
+    <h3>Nossa Missão</h3>
+    <p>Promover a internacionalização do ensino, pesquisa e extensão no IFSP Guarulhos, conectando estudantes, docentes e técnicos administrativos com instituições parceiras ao redor do mundo, fortalecendo a formação acadêmica e o intercâmbio cultural.</p>
+    <p class="ri-citacao">&quot;A internacionalização da educação superior é um meio para melhorar a qualidade da educação e da pesquisa.&quot; — Jane Knight</p>
+  </div>
+
+  <div class="ri-card contato">
+    <div class="icon">📬</div>
+    <h3>Contato</h3>
+    <div class="contato-item">
+      <strong>📧</strong>
+      <a href="mailto:acoesinternacionais@ifsp.edu.br">acoesinternacionais@ifsp.edu.br</a>
+    </div>
+    <div class="contato-item">
+      <strong>📞</strong>
+      <span>(13) 99718-8798</span>
+    </div>
+    <div class="contato-item">
+      <strong>👤</strong>
+      <span>Profa. Ms. Elizabete Rubliauskas Giachetti<br><small class="contato-cargo">Representante da Coordenadoria de Ações Internacionais</small></span>
+    </div>
+  </div>
+
+  <div class="ri-card">
+    <div class="icon">👥</div>
+    <h3>Comissão de Ações Internacionais</h3>
+    <p>
+      A Comissão de Relações Internacionais do IFSP Guarulhos coordena e
+      impulsiona as iniciativas de cooperação acadêmica internacional,
+      mobilidade estudantil e docente, parcerias institucionais e projetos
+      de pesquisa conjuntos.
+    </p>
+    <p class="total-integrantes">
+      Comissão composta por <strong>{{ site.data.integrantes | size }} integrantes</strong>.
+    </p>
+    <button
+      class="botao-integrantes"
+      type="button"
+      id="abrirComissao"
+      aria-haspopup="dialog"
+      aria-controls="modalComissao"
+    >
+      Ver integrantes
+    </button>
+  </div>
+
+  {% include modal-comissao.html %}
+
+</div>

@@ -1,0 +1,16 @@
+<!-- Depoimentos (dados em _data/depoimentos.yml) -->
+<div class="ri-card-full">
+  <h3>Depoimentos</h3>
+
+  {% for d in site.data.depoimentos %}
+  <div class="ri-depoimento">
+    <p>&quot;{{ d.texto }}&quot;</p>
+    <p class="autor">
+      <img src="{{ d.foto }}"
+           alt="{{ d.foto_alt }}"
+           class="foto-autor">
+      — {{ d.autor }}
+    </p>
+  </div>
+  {% endfor %}
+</div>

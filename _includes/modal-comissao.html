@@ -1,0 +1,37 @@
+<!-- Modal com a lista dos integrantes (dados em _data/integrantes.yml) -->
+<div
+  class="modal-comissao"
+  id="modalComissao"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="tituloModalComissao"
+  hidden
+>
+  <div class="modal-conteudo">
+    <button
+      class="fechar-modal"
+      type="button"
+      id="fecharComissao"
+      aria-label="Fechar lista de integrantes"
+    >
+      &times;
+    </button>
+
+    <h2 id="tituloModalComissao">
+      Comissão de Ações Internacionais
+    </h2>
+
+    <p class="descricao-modal">
+      Integrantes da Comissão de Ações Internacionais do IFSP Campus Guarulhos.
+    </p>
+
+    <div class="lista-integrantes">
+      {% for p in site.data.integrantes %}
+      <div class="integrante">
+        <strong>{{ p.nome }}</strong>
+        {{ p.funcao }}{% if p.registro %} - {{ p.registro }}{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<!-- Editais, Documentos e Relatórios (dados em _data/editais.yml) -->
+<div class="ri-card-full">
+  <h3>Documentos Institucionais</h3>
+  <div class="ri-docs">
+    {% for d in site.data.editais %}
+    <div class="ri-doc-item">{{ d.icone }}
+      {% if d.link %}<a href="{{ d.link }}" target="_blank" rel="noopener">{{ d.titulo }}</a>{% else %}{{ d.titulo }}{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
