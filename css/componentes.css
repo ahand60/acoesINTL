@@ -1,0 +1,124 @@
+/* =========================================================
+   componentes.css
+   Estilos que antes estavam inline (style="...") no index.html.
+   Carregar DEPOIS de main.css, campi e caras.css e integrantes.css.
+========================================================= */
+
+/* Card "Nossa Missão": citação */
+.ri-card p.ri-citacao {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #0077be;
+  font-style: italic;
+}
+
+/* Card "Contato": cargo da representante */
+.contato-item small.contato-cargo {
+  color: #6b7a8a;
+}
+
+/* Parcerias */
+.ri-card-full .ri-parcerias--topo {
+  margin-top: 12px;
+}
+.ri-card-full p.ri-parcerias-nota {
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: #3d4a5c;
+}
+
+/* Eventos e Oportunidades */
+.ri-card-full--eventos {
+  margin-bottom: 28px;
+}
+.ri-evento {
+  margin-top: 16px;
+  padding: 20px;
+  border: 2px solid #e4eef8;
+  border-radius: 12px;
+  background: #f9fbfe;
+}
+.ri-evento-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.ri-evento-texto {
+  flex: 1;
+  text-align: center;
+}
+.ri-card-full p.ri-evento-titulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 12px;
+}
+.ri-evento-titulo a {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.ri-card-full p.ri-evento-descricao {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.ri-card-full a.ri-evento-botao {
+  display: inline-block;
+  background: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.ri-card-full a.ri-evento-botao:hover {
+  background: #0077be;
+}
+.ri-evento-miniatura {
+  flex: 0 0 180px;
+  text-align: center;
+}
+.ri-evento-miniatura img {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Em telas pequenas, empilha texto e miniatura */
+@media (max-width: 600px) {
+  .ri-evento-linha {
+    flex-direction: column;
+  }
+  .ri-evento-miniatura {
+    flex-basis: auto;
+  }
+}
+
+/* Depoimentos */
+.ri-depoimento {
+  margin-top: 10px;
+}
+
+/* Rodapé */
+.ri-footer a.ri-footer-email {
+  color: #0077be;
+}
+.ri-footer p.ri-footer-copy {
+  margin-top: 6px;
+  font-size: 0.75rem;
+}
+
+
+.ri-parceria-item .ri-bandeira {
+  width: 20px;
+  height: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
