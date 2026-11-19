@@ -1,0 +1,16 @@
+# Editais, Documentos e Relatórios.
+# Itens sem "link" aparecem como texto simples (antes abriam um alert()).
+# Para ativar, adicione a linha:  link: https://...
+
+- icone: 📋
+  titulo: Edital 27/2026
+  link: https://www.ifsp.edu.br/images/2026/08-agosto/Edital_mobilidade_out_superior_-_autocusteio_-_2027-1.pdf
+- icone: 📋
+  titulo: Política de Internacionalização
+  link: https://www.ifsp.edu.br/index.php/ultimas-noticias/6140-ifsp-atualiza-politicas-de-internacionalizacao-e-linguistica-e-regulamenta-celins
+- icone: 📋
+  titulo: Política Linguística
+  link: https://www.ifsp.edu.br/images/2026/09-setembro/SET_PORT_6050_Institui_Politica_Linguistica_de_Ensino_Pesquisa_e_Extenso.pdf
+- icone: 📊
+  titulo: Regulamento do Centro de Línguas (Celin)
+  link: https://www.ifsp.edu.br/images/2026/09-setembro/SET_PORT_6051_Aprova_Atualizao_do_Regulamento_do_Centro_de_Lnguas_CeLin.pdf

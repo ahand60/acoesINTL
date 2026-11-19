@@ -1,0 +1,28 @@
+# Cartões de "Eventos e Oportunidades".
+# "imagem" e "imagem_alt" são opcionais (sem imagem, o texto ocupa a largura toda).
+
+- titulo: Oferta Nacional de Cursos de Idiomas
+  link: https://www.ifsp.edu.br/component/content/article/17-ultimas-noticias/6099-ifsp-integra-oferta-nacional-com-6-125-vagas-gratuitas-em-cursos-de-idiomas
+  descricao: IFSP integra Oferta Nacional de Cursos de Idiomas.
+  botao_texto: 📥 Baixar Cartaz
+  botao_link: https://drive.google.com/file/d/1WhpUZAdhH61R5JAXYF_B9_cL8Od7yGc1/view?usp=drive_link
+  imagem: img/Cursos.jpeg
+  imagem_alt: Cursos
+- titulo: Exame EPLI - English Proficiency Level International
+  link: https://www.ifsp.edu.br/index.php/component/content/article/17-ultimas-noticias/6015-ifsp-lanca-nacionalmente-exame-de-proficiencia-em-lingua-inglesa-voltado-a-rede-federal
+  descricao: Certificação internacional de proficiência em inglês para estudantes e servidores do IFSP.
+  botao_texto: 📥 Baixar Cartaz
+  botao_link: https://drive.google.com/file/d/1IjScGgo2TP-dS2J7cF5r6kVjSVU460-5/view?usp=sharing
+  imagem: img/EPLI.png
+  imagem_alt: Cartaz EPLI
+- titulo: Mobilidade Estudantil International 2027-1
+  link: https://www.ifsp.edu.br/index.php/component/content/article/17-ultimas-noticias/6074-ifsp-abre-64-vagas-para-mobilidade-internacional-em-portugal-mexico-espanha-e-chile
+  descricao: IFSP abre 64 vagas para mobilidade internacional em Portugal, México, Espanha e Chile
+  botao_texto: 📋 Edital 27/2026
+  botao_link: https://www.ifsp.edu.br/images/2026/08-agosto/Edital_mobilidade_out_superior_-_autocusteio_-_2027-1.pdf
+
+- titulo: Aprenda +
+  link: https://aprendamais.mec.gov.br/
+  descricao: A Plataforma Aprenda Mais é uma iniciativa do Ministério da Educação (MEC) que oferece cursos on-line, abertos e gratuitos em diversas áreas do conhecimento, incluindo inglês, espanhol e português como língua adicional.
+  botao_texto: Acessar plataforma
+  botao_link: https://aprendamais.mec.gov.br/

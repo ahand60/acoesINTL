@@ -1,0 +1,112 @@
+# Linha do tempo "Atividades Realizadas e Em Andamento" (a mais recente primeiro).
+# Campos: data, titulo (opcional, aparece em negrito), paragrafos (lista),
+# links (opcional: texto, url, externo: true abre em nova aba).
+
+- ano: 2026
+  atividades:
+    - data: Setembro de 2026
+      paragrafos:
+        - >-
+          <strong>Campus Guarulhos no COBENGE 2026</strong> — Entre 14 e 17 de setembro, o campus esteve representado no Congresso Brasileiro de Educação em Engenharia, realizado na PUC Minas, em Belo Horizonte. Participaram presencialmente os estudantes Breno Cordeiro Doimo e Gustavo Araújo e o professor Dr. Marcelo Kenji Shibuya. Foram apresentados trabalhos sobre a missão internacional com a Pascual Bravo e sobre um simulador solar articulado de baixo custo.
+      links:
+        - texto: Notícia no IFSP Guarulhos
+          url: https://gru.ifsp.edu.br/component/content/article/17-ultimas-noticias/2439-campus-guarulhos-marca-presen%C3%A7a-no-cobenge-2026-em-belo-horizonte.html
+          externo: true
+        - texto: Detalhes dos trabalhos
+          url: documentos/cobenge-2026.html
+        - texto: Fotos no Flickr
+          url: https://www.flickr.com/photos/204466937@N07/albums/
+          externo: true
+
+    - data: Maio de 2026
+      paragrafos:
+        - >-
+          <strong>Relato de experiência com o pessoal da Pascual Bravo</strong> — A participação foi registrada em álbum de fotos e vídeos no Flickr.
+      links:
+        - texto: Fotos e vídeos no Flickr
+          url: https://www.flickr.com/photos/204466937@N07/albums/72177720333559449/
+          externo: true
+        - texto: Sobre o registro
+          url: documentos/relato-pascual-bravo-maio-2026.html
+
+    - data: "2026"
+      paragrafos:
+        - >-
+          <strong>Mobilidade Internacional para Argentina</strong> — Estudantes de cursos técnicos integrados ao ensino médio foram selecionados ao programa de mobilidade para a Argentina (via ARINTER Edital N°8/2026 e edital local). Entre os estudantes selecionados tivemos dois estudantes do campus Guarulhos. <strong> Pelo PEC-G </strong> recebemos os seguintes alunos: Vanesio Nicandro Té (Guiné-Bissau) - Engenharia de Computação, Francisco Adão Segunda (Angola) - Análise e Desenvolvimento de Sistemas, Laumene Elizabeth da Fonseca (Angola) - Engenharia de Computação, Kennedy Kangethe Nganga (Quênia) - Análise e Desenvolvimento de Sistemas.
+
+- ano: 2025
+  atividades:
+    - data: Novembro de 2025
+      paragrafos:
+        - >-
+          <strong>Missão Internacional Brasil–Colômbia</strong> — A delegação da Institución Universitaria Pascual Bravo, de Medellín, participou de atividades no IFSP Campus Guarulhos. A programação incluiu cerimônia de abertura, visitas técnicas, seminários de pesquisa e atividades culturais.
+      links:
+        - texto: Conheça a missão
+          url: documentos/missao-brasil-colombia-2025.html
+        - texto: Fotos e vídeos no Flickr
+          url: https://www.flickr.com/photos/204466937@N07/albums/
+          externo: true
+
+    - data: Julho de 2025
+      paragrafos:
+        - >-
+          <strong>Missão oficial em Barranquilla, Colômbia</strong> — Representantes da SMRI-SP participaram do Fórum de Desenvolvimento Local da OCDE.
+
+    - data: "2025"
+      paragrafos:
+        - >-
+          <strong>Mobilidade Internacional para Chile</strong> — Estudantes de cursos técnicos integrados ao ensino médio foram selecionados ao programa de mobilidade para o Chile (via ARINTER Edital N°32/2025 e edital local Edital N°25/2025). Entre os estudantes selecionados tivemos três estudantes do campus Guarulhos. <strong> Pelo PEC-G </strong> recebemos o aluno Francisco Adão Segunda (Angola) - Análise e Desenvolvimento de Sistemas.
+
+- ano: 2024
+  atividades:
+    - data: "2024"
+      paragrafos:
+        - >-
+          <strong>Mobilidade internacional para Portugal</strong> — Onze estudantes de cursos técnicos integrados ao ensino médio foram selecionados pelo Edital 52/2024 para participar de um programa de mobilidade em instituições parceiras na cidade do Porto. Entre os estudantes selecionados tivemos uma estudante do campus Guarulhos.
+        - >-
+          <strong>Aproximação entre pesquisadores do IFSP e da Institución Universitaria Pascual Bravo</strong> — Foram levantados interesses de pesquisa, formados grupos temáticos e realizadas reuniões virtuais.
+      links:
+        - texto: Histórico de 2021 a 2024
+          url: documentos/historico-internacionalizacao-2021-2024.html
+
+    - data: Ação registrada em 2024
+      paragrafos:
+        - >-
+          <strong>Programa PEC-G</strong> — O campus Guarulhos aderiu ao Programa PEC-G (Programa de Estudantes-Convênio de Graduação). Recebemos o estudante Sicer Manuel Maquengo Vaz Bandeira, de São Tomé e Príncipe, no curso de Engenharia de Controle e Automação. Iniciamos com o PEC-G em 2023.
+      links:
+        - texto: Consulte o registro histórico
+          url: documentos/historico-internacionalizacao-2021-2024.html
+
+    - data: Ações registradas em 2023 e 2024
+      paragrafos:
+        - >-
+          <strong>Idiomas e capacitação</strong> — A página institucional de 2024 registrou oportunidades de capacitação de servidores no Canadá, por meio do ILSC Education Group, e o acesso de estudantes e servidores à plataforma Altíssia, divulgado pelos Editais 339/2023 e 340/2023.
+      links:
+        - texto: Consulte o registro histórico
+          url: documentos/historico-internacionalizacao-2021-2024.html
+
+- ano: 2023
+  atividades:
+    - data: "2023"
+      paragrafos:
+        - >-
+          <strong>Seminário Internacional de Pesquisa</strong> — Pesquisadores do IFSP Campus Guarulhos e da Institución Universitaria Pascual Bravo apresentaram trabalhos durante a Semana Nacional de Tecnologia, promovendo o diálogo e a aproximação entre as instituições.
+      links:
+        - texto: Saiba mais sobre as ações de 2021 a 2024
+          url: documentos/historico-internacionalizacao-2021-2024.html
+
+    - data: 2021 a 2023
+      paragrafos:
+        - >-
+          <strong>Mobilidade acadêmica para o Instituto Politécnico de Bragança</strong> — Três estudantes de Engenharia de Controle e Automação foram selecionados em editais de mobilidade e tiveram a oportunidade de estudar em Portugal por um ou dois semestres.
+      links:
+        - texto: Saiba mais
+          url: documentos/historico-internacionalizacao-2021-2024.html
+
+- ano: "2022"
+  atividades:
+    - data: "2022"
+      paragrafos:
+        - "<strong>Institución Universitaria Pascual Bravo</strong> — País: Colômbia."
+        - "<strong>Objetivo:</strong> Conhecer a infraestrutura técnico-científica do IFSP – Campus Guarulhos, especialmente os laboratórios especializados, como o Laboratório 4.0, o Laboratório Maker e o Laboratório de Energias Renováveis, explorando suas possibilidades de utilização em atividades formativas e projetos colaborativos; delinear metas e estratégias para ações conjuntas, identificando oportunidades de cooperação em ensino, pesquisa e inovação."
+        - "<strong>Resultados:</strong> A iniciativa gerou resultados concretos e houve avanço nas negociações."

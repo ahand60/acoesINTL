@@ -1,0 +1,46 @@
+# Integrantes da Comissão (aparecem no modal "Ver integrantes").
+# Para adicionar alguém, copie um bloco "- nome: ..." e cole no final.
+# O campo "registro" (SIAPE/matrícula) é opcional: apague a linha para não exibir.
+
+- nome: Elizabete Rubliauskas Giachetti
+  funcao: Presidente
+  registro: SIAPE 2319918
+- nome: Armando Handaya
+  funcao: Membro Docente
+  registro: SIAPE 2663116
+- nome: Cristiano Alves Pessoa
+  funcao: Membro Docente
+  registro: SIAPE 1680807
+- nome: Marcelo Kenji Shibuya
+  funcao: Membro Docente
+  registro: SIAPE 1919690
+- nome: Wilson Carlos Junior
+  funcao: Membro Docente
+  registro: SIAPE 1914918
+- nome: Breno Doimo
+  funcao: Membro Discente
+  registro: Gu3028046
+- nome: Maria Eduarda Alves Selvatti
+  funcao: Membro Discente
+  registro: Gu3046109
+- nome: Sabrina Filizola Teixeira
+  funcao: Membro Discente
+  registro: Gu3056368
+- nome: Milena Aragon Silva
+  funcao: Membro Discente
+  registro: Gu305604x
+- nome: Gustavo Santos Araújo
+  funcao: Membro Discente
+  registro: Gu3055558
+- nome: Matheus Souza Galvão
+  funcao: Membro Discente
+  registro: Gu3082938
+- nome: Thiago Pinheiro Paravani
+  funcao: Membro Discente
+  registro: Gu3079678
+- nome: Vanesio Nicandro Té
+  funcao: Membro Discente
+  registro: Gu3080978
+- nome: Vitor Hume Silva
+  funcao: Membro Discente
+  registro: Gu3080579
