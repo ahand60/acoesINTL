@@ -14,8 +14,11 @@
           externo: true
         - texto: Detalhes dos trabalhos
           url: documentos/cobenge-2026.html
+        - texto: Anais publicado
+          url: https://abenge.org.br/publicacao/2026/?id=451
+          externo: true
         - texto: Fotos no Flickr
-          url: https://www.flickr.com/photos/204466937@N07/albums/
+          url: https://www.flickr.com/photos/204466937@N07/albums/72177720336734997/with/55630871392
           externo: true
 
     - data: Maio de 2026
